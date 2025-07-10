@@ -59,7 +59,7 @@ export default function HomeContent() {
           </p>
         </div>
 
-        <div className="hidden md:block bg-transparent bg-opacity-40 backdrop-blur-md pt-2 md:pt-4 pb-4 rounded-r-[40px] px-6 md:px-10 lg:px-12">
+        <div className="hidden md:block bg-transparent bg-opacity-40 backdrop-blur-md pt-2 md:pt-4 pb-4 rounded-r-[40px] md:px-10 lg:px-12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 text-left font-montserrat">
             Знайдемо транспорт вашої мрії!
           </h1>
@@ -75,9 +75,9 @@ export default function HomeContent() {
             – оберіть свій транспорт вже сьогодні, адже ми гарантуємо комфорт,
             якість та надійність!
           </p>
-          <div className="mt-8">
-            <DetailsButton onClick={() => router.push("/services")} />
-          </div>
+        </div>
+        <div className="mt-6 hidden md:block pb-4 px-6 md:px-10 lg:px-12">
+          <DetailsButton onClick={() => router.push("/services")} />
         </div>
       </div>
 
