@@ -6,7 +6,7 @@ import { values } from "../../constants/values";
 export default function ValuesGrid() {
   return (
     <div className="w-full">
-      <h3 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-center font-montserrat text-gray-200">
+      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 text-center font-montserrat text-gray-200">
         Наші Непорушні Цінності
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

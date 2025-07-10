@@ -10,7 +10,7 @@ import { services } from "../../constants/services";
 export default function ServicesContent() {
   return (
     <WrapSection>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl w-full lg:my-10">
+      <div className="z-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl w-full lg:my-10">
         {services.map((service, index) => (
           <ServiceItem
             key={index}

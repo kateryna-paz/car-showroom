@@ -58,6 +58,7 @@ export default function RootLayout({
           antialiased
           bg-gradient-to-r from-gray-900 via-black to-gray-900
           min-h-screen   
+          h-full
           flex flex-col  
           md:overflow-auto 
         `}
