@@ -43,10 +43,23 @@ export default function HomeContent() {
       <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
 
       <div
-        className="absolute left-0 lg:top-[120px] md:top-[112px] top-[90px] z-20 text-white max-w-[1200px]
+        className="absolute left-0 lg:top-[120px] md:top-[112px] top-[110px] z-20 text-white max-w-[1200px]
         bg-transparent"
       >
-        <div className="bg-transparent bg-opacity-40 backdrop-blur-md pt-2 md:pt-4 pb-4 rounded-r-[40px] px-6 md:px-10 lg:px-12">
+        <div className="md:hidden bg-transparent mb-4">
+          <h1 className="text-2xl font-semibold leading-tight text-left font-montserrat px-6 ">
+            Знайдемо транспорт вашої мрії!
+          </h1>
+          <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed text-left font-kelly-slab bg-transparent bg-opacity-40 backdrop-blur-md py-4 px-6 rounded-xl mb-4">
+            Ми пропонуємо лише перевірені{" "}
+            <strong className="text-orange-300 lg:text-[21px] md:text-[19px] text-[17px]">
+              автомобілі, мотоцикли, водний транспорт та сільгосптехніку{" "}
+            </strong>{" "}
+            з США, Канади та Європи. Ваш ідеальний транспортний засіб чекає!
+          </p>
+        </div>
+
+        <div className="hidden md:block bg-transparent bg-opacity-40 backdrop-blur-md pt-2 md:pt-4 pb-4 rounded-r-[40px] px-6 md:px-10 lg:px-12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4 text-left font-montserrat">
             Знайдемо транспорт вашої мрії!
           </h1>
@@ -62,8 +75,14 @@ export default function HomeContent() {
             – оберіть свій транспорт вже сьогодні, адже ми гарантуємо комфорт,
             якість та надійність!
           </p>
+          <div className="mt-8">
+            <DetailsButton onClick={() => router.push("/services")} />
+          </div>
         </div>
-        <DetailsButton onClick={() => router.push("/services")}></DetailsButton>
+      </div>
+
+      <div className="md:hidden absolute bottom-16 z-20">
+        <DetailsButton onClick={() => router.push("/services")} />
       </div>
     </section>
   );

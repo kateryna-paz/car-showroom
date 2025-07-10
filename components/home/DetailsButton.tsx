@@ -1,47 +1,53 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 
-function DetailsButton({ onClick }: { onClick?: () => void }) {
+function DetailsButton({
+  onClick,
+  className,
+}: {
+  onClick?: () => void;
+  className?: string;
+}) {
   return (
     <motion.button
       onClick={onClick}
-      initial="rest"
-      whileHover="hover"
-      whileTap="tap"
-      className="cursor-none mx-6 md:mx-10 lg:mx-12 text-sm md:text-base lg:text-lg bg-orange-500 hover:bg-transparent text-white border-2 border-orange-500 flex gap-2 items-center font-montagu-slab font-semibold py-2 pl-8 pr-6 rounded-xl mt-6 transition-colors duration-900"
-      variants={{
-        rest: {
-          scale: 1,
-          boxShadow: "0px 0px 0px rgba(251, 146, 60, 0)",
-        },
-        hover: {
-          scale: 1.05,
-          boxShadow: "0px 0px 15px rgba(255, 129, 26, 0.6)",
-          transition: {
-            duration: 0.5,
-            ease: "easeOut",
-          },
-        },
-        tap: {
-          scale: 0.96,
-        },
+      className={`
+        ${className}
+        cursor-none flex justify-center mt-auto
+        bg-transparent 
+        text-white 
+        shadow-[0_0_30px_rgba(270,160,30,0.7)] 
+        hover:text-orange-300
+        hover:shadow-[0_0_30px_rgba(270,160,30,0.4)]
+        py-3 pl-10 pr-8 
+        rounded-xl
+
+        md:rounded-xl 
+        md:relative md:bottom-auto 
+        md:left-auto 
+
+        gap-2 items-center font-montagu-slab font-semibold
+        transition-all duration-500 ease-in-out
+      `}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.2 },
       }}
+      whileTap={{ scale: 0.95, transition: { duration: 0.2 } }}
     >
       <span>Детальніше</span>
-      <motion.span
-        variants={{
-          rest: { x: 0 },
-          hover: { x: 7 },
-          tap: { x: 2 },
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-        }}
+      <motion.div
         className="flex items-center"
+        whileHover={{ x: 5 }}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 20,
+          duration: 0.3,
+        }}
       >
         <IoIosArrowForward className="w-5 h-5" />
-      </motion.span>
+      </motion.div>
     </motion.button>
   );
 }
